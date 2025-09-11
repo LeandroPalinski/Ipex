@@ -14,6 +14,7 @@ import Aprendizagem from "@/pages/Aprendizagem";
 import Tarefas from "@/pages/Tarefas";
 import Processos from "@/pages/Processos";
 import Perfil from "@/pages/Perfil";
+import Configuracoes from "@/pages/Configuracoes";
 import Login from "@/pages/Login";
 
 const App = () => {
@@ -66,6 +67,7 @@ const App = () => {
               <Route path="/tarefas" element={<Tarefas />} />
               <Route path="/processos" element={<Processos />} />
               <Route path="/perfil" element={<Perfil />} />
+              <Route path="/configuracoes" element={<Configuracoes />} />
             </Route>
           ) : (
             <Route path="*" element={<Login />} />
