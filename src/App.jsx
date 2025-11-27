@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { motion } from "framer-motion";
 import { supabase } from "@/lib/supabaseClient";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 // Layouts
 import Layout from "@/components/Layout";
@@ -51,7 +52,8 @@ const App = () => {
   }
 
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -73,7 +75,8 @@ const App = () => {
         </Routes>
         <Toaster />
       </motion.div>
-    </Router>
+      </Router>
+    </AuthProvider>
   );
 };
 

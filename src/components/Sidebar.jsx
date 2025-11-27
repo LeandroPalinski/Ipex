@@ -41,8 +41,8 @@ const Sidebar = () => {
     <div className="flex h-full flex-col">
       <div className="flex h-16 items-center justify-center border-b px-4">
         <NavLink to="/" className="flex items-center gap-2 font-semibold">
-          <img src="https://storage.googleapis.com/hostinger-horizons-assets-prod/b7026784-c830-4da8-8de6-c43763cc5798/b4524bd6e03a7f4838c8535f6fa15a6a.png" alt="Logo Construtora" className="h-8 w-auto" />
-          <span className="text-lg">Academia IPEX</span>
+          <img src="/logo.png" alt="IPEX Construtora" className="h-10 w-auto" />
+          <span className="text-lg font-bold">IPEX ONE</span>
         </NavLink>
       </div>
       <nav className="flex-1 overflow-y-auto py-4">

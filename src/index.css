@@ -11,8 +11,8 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 142.1 70.6% 45.3%; /* Verde */
-    --primary-foreground: 210 40% 98%;
+    --primary: 68 100% 42%; /* Verde IPEX #C4D600 */
+    --primary-foreground: 0 0% 0%; /* Preto para contraste */
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
@@ -23,7 +23,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 142.1 70.6% 45.3%; /* Verde para o anel de foco */
+    --ring: 68 100% 42%; /* Verde IPEX para o anel de foco */
     --radius: 0.5rem;
   }
  
@@ -34,8 +34,8 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 142.1 70.6% 45.3%; /* Verde */
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 68 100% 42%; /* Verde IPEX #C4D600 */
+    --primary-foreground: 0 0% 0%; /* Preto para contraste */
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
@@ -46,7 +46,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 142.1 70.6% 45.3%; /* Verde para o anel de foco */
+    --ring: 68 100% 42%; /* Verde IPEX para o anel de foco */
   }
 }
 
@@ -57,11 +57,6 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-    background-image: url('https://storage.googleapis.com/hostinger-horizons-assets-prod/b7026784-c830-4da8-8de6-c43763cc5798/77d7924f3a7d31f86fd3fe87f8a31ed0.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 }
 
@@ -70,9 +65,9 @@
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(196, 214, 0, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -86,5 +81,5 @@
 
 .card-hover:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(196, 214, 0, 0.2);
 }
