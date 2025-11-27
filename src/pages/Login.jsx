@@ -1,5 +1,6 @@
 
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { supabase } from "@/lib/supabaseClient";
 
 const Login = () => {
+  const navigate = useNavigate();
   const { toast } = useToast();
   const [email, setEmail] = React.useState("");
   const [senha, setSenha] = React.useState("");
@@ -24,6 +26,7 @@ const Login = () => {
       });
 
       if (error) {
+        console.error("Erro no login:", error);
         toast({
           title: "Erro no login",
           description: error.message || "Ocorreu um erro ao tentar fazer login.",
@@ -34,6 +37,11 @@ const Login = () => {
           title: "Login realizado com sucesso",
           description: "Bem-vindo à Plataforma IPEX ONE.",
         });
+        
+        // Redirecionar para o dashboard após login bem-sucedido
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 500);
       } else {
          toast({
           title: "Erro no login",
@@ -42,9 +50,10 @@ const Login = () => {
         });
       }
     } catch (error) {
+      console.error("Erro inesperado:", error);
       toast({
         title: "Erro inesperado",
-        description: "Ocorreu um erro inesperado. Tente novamente.",
+        description: error.message || "Ocorreu um erro inesperado. Tente novamente.",
         variant: "destructive",
       });
     } finally {
@@ -141,6 +150,7 @@ const Login = () => {
               <p className="font-medium">Usuários de teste:</p>
               <p className="mt-1">leandro@ipex.com</p>
               <p>ti@ipexconstrutora.com.br</p>
+              <p>rh@ipexconstrutora.com.br</p>
             </div>
           </CardFooter>
         </Card>
